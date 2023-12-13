@@ -17,24 +17,24 @@ Diseña un endpoint que reciba un JSON con el siguiente formato:
 [
     {
         "ticker": "OEST",
-        "codigo": 49,
+        "code": 49,
         "total": 3500000.0,
-        "excedido": true,
-        "ultimo_cambio": "2023-06-22 12:41:31"
+        "exceeded": true,
+        "last_change": "2023-06-22 12:41:31"
     },
     {
         "ticker": "BBAR",
-        "codigo": 94,
+        "code": 94,
         "total": 0.0,
-        "excedido": false,
-        "ultimo_cambio": "2023-06-22 12:41:31"
+        "exceeded": false,
+        "last_change": "2023-06-22 12:41:31"
     },
     {
         "ticker": "CRES",
-        "codigo": 274,
+        "code": 274,
         "total": 264485884.77,
-        "excedido": true,
-        "ultimo_cambio": "2023-06-22 12:41:31"
+        "exceeded": true,
+        "last_change": "2023-06-22 12:41:31"
     },
     ....
 ]
@@ -44,9 +44,9 @@ El endpoint deberá parsear estos datos y persistirlos en una tabla de una base 
 
 ### A tener en cuenta
 
-- El campo _codigo_ es un número entero mayor a 1.
+- El campo _code_ es un número entero mayor a 1.
 - El campo _total_ es un número decimal mayor igual a 0.
-- El campo _ultimo_cambio_ debe tener el formato `YYYY-MM-DD hh:mm:ss`
+- El campo _last_change_ debe tener el formato `YYYY-MM-DD hh:mm:ss`
 
 ## Endpoint 2: Persistencia de Archivos en S3
 
@@ -60,7 +60,7 @@ Headers: Content-Type: multipart/form-data
 
 ### S3 de AWS
 
-La idea es solamente emular la carga del archivo en S3. Para ello se podría tener una función que retorne la key como un string con el formato `files/*filename*.xxx`.
+La idea es solamente emular la carga del archivo en S3. Para ello se podría tener una función que retorne la key como un string con el formato `files/*uuid.UUID*-*filename.xxx*`.
 
 ---
 
