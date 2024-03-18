@@ -1,12 +1,12 @@
 # Balanz - Desafío de Backend en Go
 
 ¡Bienvenido al Desafío de Backend en Go! Este desafío está diseñado para evaluar tus habilidades en programación y desarrollo de backend utilizando el lenguaje de programacion Go (Golang).
-En este desafío, se espera que diseñes y desarrolles dos endpoints que interactúen con una base de datos PostgreSQL y emulen la persistencia de archivos en un servicio S3 de AWS.
+En este desafío, se espera que diseñes y desarrolles dos endpoints que interactúen con una base de datos PostgreSQL (o SQLite) y emulen la persistencia de archivos en un servicio S3 de AWS.
 
 ## Pautas Generales
 
 - Podes utilizar el framework de tu elección (por ejemplo, Gin Gonic, Fiber) para implementar los endpoints de manera eficiente.
-- Tenes la libertad de elegir el ORM que prefieras para interactuar con la base de datos PostgreSQL.
+- Tenes la libertad de elegir el ORM que prefieras para interactuar con la base de datos PostgreSQL (o SQLite).
 - Asegurate de manejar los errores de manera adecuada en tu código.
 
 ## Endpoint 1: Parseo y Persistencia de Datos
@@ -40,7 +40,7 @@ Diseña un endpoint que reciba un JSON con el siguiente formato:
 ]
 ```
 
-El endpoint deberá parsear estos datos y persistirlos en una tabla de una base de datos PostgreSQL.
+El endpoint deberá parsear estos datos y persistirlos en una tabla de una base de datos PostgreSQL (o SQLite).
 
 ### A tener en cuenta
 

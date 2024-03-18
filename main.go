@@ -7,6 +7,11 @@ import (
 )
 
 func main() {
+	// db := database.GetConnection()
+	// if err := database.MakeMigrations(db); err != nil {
+	// 	panic(err)
+	// }
+
 	r := gin.Default()
 
 	r.POST("/endpoint1", handler.HandleEndpoint1)
