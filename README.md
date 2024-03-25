@@ -11,42 +11,16 @@ En este desafío, se espera que diseñes y desarrolles dos endpoints que interac
 
 ## Endpoint 1: Parseo y Persistencia de Datos
 
-Diseña un endpoint que reciba un JSON con el siguiente formato:
+Diseña un endpoint que consulte data de la siguiente URL:
 
-```json
-[
-    {
-        "ticker": "OEST",
-        "code": 49,
-        "total": 3500000.0,
-        "exceeded": true,
-        "last_change": "2023-06-22 12:41:31"
-    },
-    {
-        "ticker": "BBAR",
-        "code": 94,
-        "total": 0.0,
-        "exceeded": false,
-        "last_change": "2023-06-22 12:41:31"
-    },
-    {
-        "ticker": "CRES",
-        "code": 274,
-        "total": 264485884.77,
-        "exceeded": true,
-        "last_change": "2023-06-22 12:41:31"
-    },
-    ....
-]
-```
+`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd`
 
-El endpoint deberá parsear estos datos y persistirlos en una tabla de una base de datos PostgreSQL (o SQLite).
+El endpoint deberá parsear estos datos y persistir en una tabla de una base de datos PostgreSQL (o SQLite) los siguientes campos:
 
-### A tener en cuenta
-
-- El campo _code_ es un número entero mayor a 1.
-- El campo _total_ es un número decimal mayor igual a 0.
-- El campo _last_change_ debe tener el formato `YYYY-MM-DD hh:mm:ss`
+- Symbol
+- Name
+- Current Price
+- Last Updated
 
 ## Endpoint 2: Persistencia de Archivos en S3
 
